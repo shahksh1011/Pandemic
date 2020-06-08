@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_people">
+
+    <fragment
+        android:id="@+id/navigation_people"
+        android:name="com.example.kshitij.pandemic.ui.home.PersonFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_person" >
+        <action
+            android:id="@+id/action_navigation_people_to_singlePersonFragment"
+            app:destination="@id/singlePersonFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.kshitij.pandemic.ui.covidcases.CovidCasesFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_add_person"
+        android:name="com.example.kshitij.pandemic.ui.addPerson.AddPersonFragment"
+        android:label="@string/add_person"
+        tools:layout="@layout/fragment_add_person" />
+    <fragment
+        android:id="@+id/singlePersonFragment"
+        android:name="com.example.kshitij.pandemic.ui.singlePerson.SinglePersonFragment"
+        android:label="single_person_fragment"
+        tools:layout="@layout/single_person_fragment" >
+        <action
+            android:id="@+id/action_singlePersonFragment_to_addHealthFragment"
+            app:destination="@id/addHealthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addHealthFragment"
+        android:name="com.example.kshitij.pandemic.ui.personHealth.AddHealthFragment"
+        android:label="fragment_add_health"
+        tools:layout="@layout/fragment_add_health" />
+</navigation>
