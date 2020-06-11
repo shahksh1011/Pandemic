@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/singlePersonFragment"
         android:name="com.example.kshitij.pandemic.ui.singlePerson.SinglePersonFragment"
-        android:label="Sympton Charts"
+        android:label="Symptom Charts"
         tools:layout="@layout/single_person_fragment">
         <action
             android:id="@+id/action_singlePersonFragment_to_addHealthFragment"
